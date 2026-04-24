@@ -5,6 +5,8 @@ PlacePrep is a full-stack platform designed to streamline college placement prep
 ## Project Type
 Academic Project (Enhanced & Maintained by Me)
 
+Live Link-https://placeprep-college-placement.onrender.com/
+
 ## Key Features
 
 - 📊 DSA Tracker with coding compiler
