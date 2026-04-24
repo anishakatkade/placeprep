@@ -1,106 +1,63 @@
 # PlacePrep - College Placement Command Center
 
-Suggested repository name: **`placeprep-college-placement`**
+PlacePrep is a full-stack platform designed to streamline college placement preparation. It provides a centralized system for students to track progress, practice coding, prepare for interviews, and manage placement-related activities efficiently.
 
-PlacePrep is a full-stack platform for placement preparation with:
-- DSA tracker and coding compiler
-- Aptitude mock tests and results
-- Mock interview module
-- Resume ATS tools
-- Company and college placement tracking
+## Project Type
+Academic Project (Enhanced & Maintained by Me)
 
-## Screenshot
+## Key Features
 
-![Login Screen](docs/screenshots/login.png)
+- 📊 DSA Tracker with coding compiler
+- 🧠 Aptitude mock tests with performance analysis
+- 🎤 Mock interview preparation module
+- 📄 Resume ATS optimization tools
+- 🏢 Company-wise placement tracking
 
 ## Tech Stack
 
 - Frontend: React + Vite
 - Backend: Node.js + Express
 - Database: MongoDB Atlas
-- Auth: JWT
+- Authentication: JWT
+
+## My Contributions
+
+- Implemented and improved authentication using JWT
+- Enhanced UI using React and Tailwind (if applied)
+- Worked on API integration between frontend and backend
+- Improved user flow and performance
+- Debugged and optimized backend routes
 
 ## Project Structure
 
-```txt
-client/   -> React frontend
-server/   -> Express API + MongoDB models/routes
-```
+client/   -> React frontend  
+server/   -> Express API + MongoDB models/routes  
 
 ## Local Setup
 
 1. Install dependencies:
-```bash
-npm install
-cd server && npm install
-cd ../client && npm install
-```
+npm install  
+cd server && npm install  
+cd ../client && npm install  
 
 2. Configure backend env in `server/.env`:
-```env
-PORT=5000
-MONGO_URI=your_mongodb_atlas_uri
-JWT_SECRET=your_secret
-JWT_EXPIRES_IN=7d
-CLIENT_URL=http://localhost:5173
-```
+PORT=5000  
+MONGO_URI=your_mongodb_atlas_uri  
+JWT_SECRET=your_secret  
+JWT_EXPIRES_IN=7d  
+CLIENT_URL=http://localhost:5173  
 
 3. Seed initial data:
-```bash
-npm run seed:all
-```
+npm run seed:all  
 
 4. Run app:
-```bash
-npm run dev
-```
+npm run dev  
 
-## Deploy on Render
+## Deployment
 
-This repo includes `render.yaml` for easier setup.
-
-### Option A: Blueprint Deploy (Recommended)
-
-1. Push this code to GitHub.
-2. In Render: **New +** -> **Blueprint** -> select repo.
-3. Render will create:
-   - `placeprep-api` (backend)
-   - `placeprep-web` (frontend static)
-4. Set required environment variables in Render dashboard:
-   - `MONGO_URI`
-   - `JWT_SECRET`
-   - `CLIENT_URL` = frontend service URL
-   - `VITE_API_BASE_URL` = `https://<your-backend-service>.onrender.com/api`
-   - Other optional keys (OpenAI, Anthropic, Email, Google OAuth) as needed
-
-### Option B: Manual Deploy
-
-#### Backend Web Service
-- Root directory: `server`
-- Build command: `npm install`
-- Start command: `npm start`
-- Add env vars: `MONGO_URI`, `JWT_SECRET`, `CLIENT_URL`, etc.
-
-#### Frontend Static Site
-- Root directory: `client`
-- Build command: `npm install && npm run build`
-- Publish directory: `build`
-- Env var:
-  - `VITE_API_BASE_URL=https://<backend-url>.onrender.com/api`
-
-## Registration / Email Troubleshooting (Render)
-
-If "Create account" does not move forward or no email is received:
-
-1. Confirm backend is deployed as a **Web Service** (not static).
-2. Confirm frontend env `VITE_API_BASE_URL` points to backend, for example:
-   - `https://placeprep-api.onrender.com/api`
-3. Confirm backend envs are set:
-   - `MONGO_URI`, `JWT_SECRET`
-   - `CLIENT_URL` = frontend URL
-   - `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_USER`, `EMAIL_PASS`, `EMAIL_FROM` (for sending mail)
+Deployed using Render with separate services for backend and frontend.
 
 ## Notes
 
-- `.env` files are ignored by git for security.
-- Do not commit DB credentials or API keys.
+- Environment variables are secured using `.env`
+- Sensitive data like API keys are not committed
